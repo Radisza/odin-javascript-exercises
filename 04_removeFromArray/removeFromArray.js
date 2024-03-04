@@ -1,4 +1,6 @@
-const removeFromArray = function() {
+const removeFromArray = function(array, ...elements_to_remove) {
+    const elems = new Set(elements_to_remove);
+    return array.filter((x) => ! elems.has(x));
 
 };
 
